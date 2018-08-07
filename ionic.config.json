@@ -1,0 +1,7 @@
+{
+  "name": "courtStat",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
