@@ -20,7 +20,8 @@ import { ProfilePageModule } from '../profile/profile.module'
     TabsPageRoutingModule,
     LeaderboardsPageModule,
     LeaguePageModule,
-    ProfilePageModule
+    ProfilePageModule,
+    CreatePageModule
   ],
   declarations: [TabsPage]
 })
