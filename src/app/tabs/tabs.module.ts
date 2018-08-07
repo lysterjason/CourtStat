@@ -9,7 +9,8 @@ import { TabsPageRoutingModule } from './tabs.router.module';
 import { TabsPage } from './tabs.page';
 import { LeaguePageModule } from '../league/league.module';
 import { LeaderboardsPageModule } from '../leaderboards/leaderboards.module';
-import { HomePageModule } from '../home/home.module';
+import { CreatePageModule } from '../create/create.module';
+import { ProfilePageModule } from '../profile/profile.module'
 
 @NgModule({
   imports: [
@@ -17,9 +18,9 @@ import { HomePageModule } from '../home/home.module';
     CommonModule,
     FormsModule,
     TabsPageRoutingModule,
-    HomePageModule,
     LeaderboardsPageModule,
-    LeaguePageModule
+    LeaguePageModule,
+    ProfilePageModule
   ],
   declarations: [TabsPage]
 })

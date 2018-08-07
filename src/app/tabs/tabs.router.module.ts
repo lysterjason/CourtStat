@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
-import { HomePage } from '../home/home.page';
 import { LeaderboardsPage } from '../leaderboards/leaderboards.page';
 import { LeaguePage } from '../league/league.page';
+import { CreatePage } from '../create/create.page';
+import { ProfilePage } from '../profile/profile';
 
 const routes: Routes = [
   {
@@ -12,9 +13,9 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'home',
-        outlet: 'home',
-        component: HomePage
+        path: 'create',
+        outlet: 'create',
+        component: CreatePage
       },
       {
         path: 'leaderboards',
@@ -25,12 +26,17 @@ const routes: Routes = [
         path: 'league',
         outlet: 'league',
         component: LeaguePage
+      },
+      {
+        path: 'profile',
+        outlet: 'profile',
+        component: ProfilePage
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/(home:home)',
+    redirectTo: '/tabs/(create:create)',
     pathMatch: 'full'
   }
 ];
