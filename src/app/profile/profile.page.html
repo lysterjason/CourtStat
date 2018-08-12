@@ -1,21 +1,19 @@
 
 
 <ion-content padding>
+  <div class="content">
   <span>
     <ion-icon name="contact" class="user-avatar"></ion-icon>
-    <div *ngIf="userName as userName$ | async">
+    <span class="username-large" *ngIf="(userName$ | async) as userName">
       {{ userName }}
-    </div>
-    <ion-card class="large-card" no-margin>
+    </span>
   </span>
+  <ion-card class="large-card" no-margin>
     <ion-card-content>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <span class="circle"></span>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-    </ion-card-content>
+            <span class="circle"></span>
+            <span class="circle"></span>
+   </ion-card-content>
   </ion-card>
+  </div>
 </ion-content>
+
