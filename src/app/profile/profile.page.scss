@@ -2,6 +2,11 @@
     padding-top: 30px;
 }
 
+.header-items {
+    display: flex;
+    align-items: center;
+}
+
 .username-large {
     font-size: 25px;
 }
@@ -22,8 +27,8 @@
 .circle {
     border-radius: 50%;
     background-color: #1ac6c9;
-    height: 75px;
-    width: 75px;
+    height: 100px;
+    width: 100px;
 }
 
 .circle-box {
