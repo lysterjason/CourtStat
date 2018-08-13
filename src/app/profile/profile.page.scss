@@ -15,16 +15,18 @@
 
 .large-card { 
     padding: 16px;
-    padding-top: 300px !important;
     height: 75vh;
     margin: 0 auto;
 }
 
 .circle {
-    position: absolute;
     border-radius: 50%;
     background-color: #1ac6c9;
     height: 75px;
     width: 75px;
-    display: inline;
+}
+
+.circle-box {
+    display: flex;
+    justify-content: space-between;
 }
