@@ -11,8 +11,35 @@
       <ion-card class="large-card" no-margin>
     <ion-card-content>
       <div class="circle-box">
-            <span class="circle"></span>
-            <span class="circle"></span>
+         <span class="circle">
+          <h6 class="circle-title">
+            Overall<br>Rank:
+          </h6>
+          <h2 class="circle-rank-position">
+            69<sup>th</sup>
+          </h2>
+          </span>
+          <span class="circle">
+            <h6 class="circle-title">
+              Favourite<br>Team:
+            </h6>
+            <h2 style="color: white; text-align: center;">
+              [.png here]
+            </h2>
+          </span>
+      </div>
+      <div class="divider"></div>
+      <div class="profile-table-box">
+        <ion-list class="profile-table">
+          <th *ngIf='leagues && leagues.length'>Leagues</th>
+          <tr *ngFor='let league of leagues'>
+            <ion-item class="league-names" (click)='showInfo(league.LeagueName)'>{{league.LeagueName}}<ion-icon class="list-icon" name="arrow-down"></ion-icon></ion-item>
+            <p *ngIf='league1 == true'>Players: {{league.Players}}<br>
+                                       League Leader: {{league.LeagueLeader}}<br>
+                                       Total League Points: {{league.TotalLeaguePoints}}
+            </p>
+          </tr>
+        </ion-list>
       </div>
    </ion-card-content>
   </ion-card>

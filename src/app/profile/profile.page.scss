@@ -9,6 +9,7 @@
 
 .username-large {
     font-size: 25px;
+    color: #666666;
 }
 
 .user-avatar {
@@ -31,7 +32,27 @@
     width: 100px;
 }
 
+.circle-title {
+    padding-top: 5px;
+    color: white;
+    text-align: center;
+}
+
+.circle-rank-position {
+    color: white;
+    font-size: 30px;
+    text-align:center;
+}
+
 .circle-box {
     display: flex;
     justify-content: space-between;
+}
+
+.divider {
+    height: 30px;
+}
+
+.league-names {
+    font-size: 15px;
 }
