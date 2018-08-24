@@ -30,15 +30,10 @@
       </div>
       <div class="divider"></div>
       <div class="profile-table-box">
-        <ion-list class="profile-table">
-          <th *ngIf='leagues && leagues.length'>Leagues</th>
-          <tr *ngFor='let league of leagues'>
-            <ion-item class="league-names" (click)='showInfo(league.LeagueName)'>{{league.LeagueName}}<ion-icon class="list-icon" name="arrow-down"></ion-icon></ion-item>
-            <p *ngIf='league1 == true'>Players: {{league.Players}}<br>
-                                       League Leader: {{league.LeagueLeader}}<br>
-                                       Total League Points: {{league.TotalLeaguePoints}}
-            </p>
-          </tr>
+        <h2 *ngIf='leagues && leagues.length'>Leagues</h2>
+        <ion-list class="profile-table" *ngFor='let league of leagues'>
+            <ion-item class="league-names"  (click)='showInfo(league.id)'>{{league.id}}</ion-item>
+
         </ion-list>
       </div>
    </ion-card-content>
