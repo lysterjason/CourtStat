@@ -1,9 +1,14 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>signIn</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content padding>
-  This is a test
+
+  <ion-input [(ngModel)]="email" placeholder="Email"></ion-input>
+  <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>
+
+  <ion-button (click)="signIn()">
+    <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
+  </ion-button>
+
+  <div> Don't have an account?</div>
+  <div>
+    <a>Sign Up</a>
+  </div>
 </ion-content>
