@@ -15,7 +15,7 @@
 .user-avatar {
     font-size: 75px;
     margin-left: 20px;
-    color: #1ac6c9;
+    color: #4bc1bb;
 }
 
 
@@ -27,7 +27,7 @@
 
 .circle {
     border-radius: 50%;
-    background-color: #1ac6c9;
+    background-color: #4bc1bb;
     height: 100px;
     width: 100px;
 }
@@ -56,4 +56,11 @@
 .league-names {
     font-size: 15px;
     font-weight: bold;
+}
+
+.fav-team-png {
+    height: 55px;
+    width: 55px;
+    background: #4bc1bb;
+    margin: 0 auto;
 }

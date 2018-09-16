@@ -2,12 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
-  { path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  
+  { path: '', loadChildren: './sign-in/sign-in.module#SignInPageModule' },
+  { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' }
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
