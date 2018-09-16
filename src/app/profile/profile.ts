@@ -11,19 +11,19 @@ export class ProfilePage implements OnInit {
   
   leagues: any[] = [
     
-        "AyeLmao" : {
+        "AyeLmao", {
           "id" : "ayelmao",
           "league leader" : "xXDragonSlayerXx",
           "players" : 13,
           "total league points" : 21320
         },
-        "Joe Colbourne Railers" : {
+        "Joe Colbourne Railers", {
           "id" : "joe colbourne railers",
           "league leaders" : "Jason Lyster",
           "players" : 17,
           "total league points" : 25680
         },
-        "The Boys" : {
+        "The Boys", {
           "id" : "the boys",
           "league leader" : "John Stamos",
           "players" : 7,
