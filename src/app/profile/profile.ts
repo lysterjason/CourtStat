@@ -11,23 +11,26 @@ export class ProfilePage implements OnInit {
   
   leagues: any[] = [
     
-        "AyeLmao" : {
+        {
+          "name" : "AyeLmao",
           "id" : "ayelmao",
-          "league leader" : "xXDragonSlayerXx",
+          "leagueLeader" : "xXDragonSlayerXx",
           "players" : 13,
-          "total league points" : 21320
+          "totalLeaguePoints" : 21320
         },
-        "Joe Colbourne Railers" : {
+        {
+          "name" : "Joe Colbourne Railers",
           "id" : "joe colbourne railers",
-          "league leaders" : "Jason Lyster",
+          "leagueLeader" : "Jason Lyster",
           "players" : 17,
-          "total league points" : 25680
+          "totalLeaguePoints" : 25680
         },
-        "The Boys" : {
+        {
+          "name" : "The Boys",
           "id" : "the boys",
-          "league leader" : "John Stamos",
+          "leagueLeader" : "John Stamos",
           "players" : 7,
-          "total league points" : 13853
+          "totalLeaguePoints" : 13853
         }
       
 ];
@@ -45,8 +48,10 @@ export class ProfilePage implements OnInit {
     this.userName$ = this.getCurrentUser();
   }
 
-  showInfo(leagueName) {
-      
+  showInfo(leagueId) {
+      if(leagueId==="ayelmao"){
+        
+      }
   }
 
 }
