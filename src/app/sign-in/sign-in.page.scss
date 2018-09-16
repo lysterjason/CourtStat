@@ -1,4 +1,35 @@
 ion-input {
     border: 5px;
     border-color: aqua;
+    margin-top: 10px;
+    width: 75%;
 }
+
+a {
+    color: #1ac6c9;
+}
+
+ion-button {
+    display: block;
+    float: right;
+}
+ion-icon {
+    font-size: 40px;
+    color: #1ac6c9;
+}
+
+.title {
+    color: #1ac6c9;
+    font-size: 72px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper {
+    padding-top: 125px;
+}
+
+.footer {
+    text-align: center;
+}
+
