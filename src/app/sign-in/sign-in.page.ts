@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import * as firebase from 'firebase';
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -12,24 +14,23 @@ export class SignInPage implements OnInit {
   private email: string;
   private password: string;
 
-  constructor() { }
+  constructor(public afAuth: AngularFireAuth,
+              public router: Router) {
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        router.navigateByUrl('/app/tabs/(create:create)');
+      } else {
+        console.log("Signed Out");
+      }
+    });
+  }
 
   ngOnInit() {
   }
 
   signIn(): void {
-    console.log(this.email);
-    console.log(this.password);
     firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-    .catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      if (errorCode === 'auth/wrong-password') {
-        alert('Wrong password.');
-      } else {
-        alert(errorMessage);
-      }
+    .catch(function(error) {  
       console.log(error);
     });
   }

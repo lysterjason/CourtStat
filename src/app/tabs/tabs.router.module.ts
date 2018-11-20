@@ -34,11 +34,6 @@ const routes: Routes = [
       }
     ]
   },
-  {
-    path: '',
-    redirectTo: '/tabs/(create:create)',
-    pathMatch: 'full'
-  }
 ];
 
 @NgModule({
