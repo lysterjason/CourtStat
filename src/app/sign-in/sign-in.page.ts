@@ -34,4 +34,8 @@ export class SignInPage implements OnInit {
       console.log(error);
     });
   }
+
+  signUp(): void {
+    this.router.navigateByUrl('/app/sign-up');
+  }
 }
