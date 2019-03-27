@@ -14,6 +14,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase, } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+import { AuthService } from './../app/services/auth-service';
+
 export const firebaseConfig = {
   apiKey: "AIzaSyCOPDe8_PIsgPIZABBXfou4v95XM3yvTBQ",
   authDomain: "statgen-993f4.firebaseapp.com",
@@ -35,6 +37,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
   ],
   providers: [
+    AuthService,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

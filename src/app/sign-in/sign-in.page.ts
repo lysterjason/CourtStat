@@ -1,20 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
+
+import { AuthService } from '../services/auth-service';
 
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.page.html',
   styleUrls: ['./sign-in.page.scss'],
 })
-export class SignInPage implements OnInit {
+
+export class SignInPage {
 
   private email: string;
+  private errorMessage: string;
   private password: string;
 
-  constructor(public afAuth: AngularFireAuth,
+  constructor(public authService: AuthService,
               public router: Router) {
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
@@ -25,14 +28,8 @@ export class SignInPage implements OnInit {
     });
   }
 
-  ngOnInit() {
-  }
-
   signIn(): void {
-    firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-    .catch(function(error) {  
-      console.log(error);
-    });
+    this.authService.signIn(this.email, this.password);
   }
 
   signUp(): void {
