@@ -1,4 +1,5 @@
 <ion-content padding>
+<<<<<<< HEAD
     <ion-button (click)="goBack()" fill="clear" item-left no-padding>
         <ion-icon slot="icon-only" name="close" no-padding></ion-icon>
     </ion-button>
@@ -26,3 +27,18 @@
         </div>
     </div>
 </ion-content>                                                                              
+=======
+   <div class="wrapper">
+     <h1 class="title">Create your CourtStat Account</h1>
+     <ion-item>
+       <ion-input [(ngModel)]="email" placeholder="Email" padding></ion-input>
+     </ion-item>
+     <ion-item>
+       <ion-input [(ngModel)]="password" placeholder="Password" type="password" padding></ion-input>
+       <ion-button (click)="signIn()" fill="clear" item-right>
+         <ion-icon slot="icon-only" name="arrow-round-forward"></ion-icon>
+       </ion-button>
+     </ion-item>
+   </div>
+ </ion-content>
+>>>>>>> 7405174ae4cd6a0f34986c27915fc193c752d347
